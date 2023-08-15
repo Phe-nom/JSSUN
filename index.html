@@ -1,12 +1,12 @@
 <html>
 	<head>
-		<title>Even odd app by Yeshh</title>
+		<title>Square root finder app by Yeshh</title>
 		<style>
 			* { font-size:50px; font-family:impact; }
 			body { backgrround-color:lightyellow; }
 		</style>
 		<script>
-			fucntion check()
+			function check()
 			{
 				event.preventDefault();
 				let num = document.getElementById("num");
@@ -18,22 +18,22 @@
 					ans.innerHTML = "";
 					num.focus();
 					return;
-				}s
-				let n = parseInt(num.value);
-				let r = n%2==0 ? "even" : "odd";
+				}
+				let n = parseFloat(num.value);
+				let r = n ** 0.5 ;
 				ans.innerHTML = r;
 			}
 		</script>
 	</head>
 	<body>
 		<center>
-			<h1> Even odd Finder </h1>
+			<h1> Square root finder </h1>
 			<form onsubmit="check()">
-			<input type="number" id="num" placeholder="Enter an integer"></input>
+			<input type="number" id="num" placeholder="Enter an number"></input>
 			<br><br>
-			<input type="submit" value="Find Even/odd"></input>
+			<input type="submit" value="Find square root"></input>
 			</form>
-			<h1 id="ans"/>
+			<h1 id="ans"></h1>
 		</center>
 
 	</body>
